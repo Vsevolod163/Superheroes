@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var mainLabel: UILabel!
@@ -19,5 +20,6 @@ final class CollectionViewCell: UICollectionViewCell {
         mainLabel.text = superhero.name
         let imageURL = URL(string: superhero.images.lg)
         
+        imageView.kf.setImage(with: imageURL)
     }
 }
