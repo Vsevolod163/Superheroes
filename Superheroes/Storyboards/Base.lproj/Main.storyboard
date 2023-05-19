@@ -11,7 +11,7 @@
         <!--Superheroes-->
         <scene sceneID="Ddp-cd-qjk">
             <objects>
-                <collectionViewController id="3TU-Zv-glx" sceneMemberID="viewController">
+                <collectionViewController id="3TU-Zv-glx" customClass="SuperheroesViewController" customModule="Superheroes" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="FJq-jE-hn1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                             <inset key="sectionInset" minX="30" minY="30" maxX="30" maxY="30"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="superhero" id="mlw-sk-KyF">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="superhero" id="mlw-sk-KyF" customClass="CollectionViewCell" customModule="Superheroes" customModuleProvider="target">
                                 <rect key="frame" x="84.5" y="30" width="151" height="194"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="iuz-gl-adP">
@@ -51,6 +51,10 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="151" height="194"/>
+                                <connections>
+                                    <outlet property="imageView" destination="Jyl-RQ-wsY" id="7Yf-ZF-8Xd"/>
+                                    <outlet property="mainLabel" destination="4dl-1R-pXk" id="Yoi-ve-yn3"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
