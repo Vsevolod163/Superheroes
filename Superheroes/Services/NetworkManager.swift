@@ -14,11 +14,11 @@ enum NetworkError: Error {
 }
 
 struct NetworkManager {
-    static var networkManager = NetworkManager()
+    static var shared = NetworkManager()
     
     private init() {}
     
-    func fetchData(from url: URL, completion: @escaping(Result<[Superhero], NetworkError>) -> Void) {
+    func fetchData(completion: @escaping(Result<[Superhero], NetworkError>) -> Void) {
         guard let url = URL(string: "https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json") else {
             completion(.failure(.invalidURL))
             return
